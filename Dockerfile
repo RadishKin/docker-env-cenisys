@@ -7,6 +7,7 @@ RUN buildDeps="which git libicu-devel zlib-devel bzip2-devel python-devel" \
 	&& git clone --recursive https://github.com/boostorg/boost /usr/src/boost \
 	&& cd /usr/src/boost \
 	&& ./bootstrap.sh \
+	&& ./b2 headers \
 	&& ./b2 -j"$(nproc)" install \
 	&& cd \
 	&& rm -rf /usr/src/boost \
