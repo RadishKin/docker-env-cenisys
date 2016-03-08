@@ -1,8 +1,8 @@
 FROM fedora:rawhide
 
-RUN dnf -y install icu gcc gcc-c++ cmake python3-sphinx
+RUN dnf -y install bzip2 icu gcc gcc-c++ cmake python3-sphinx
 
-RUN buildDeps="which git libicu-devel zlib-devel" \
+RUN buildDeps="which git libicu-devel zlib-devel bzip2-devel python-devel" \
 	&& dnf -y install $buildDeps \
 	&& git clone --recursive https://github.com/boostorg/boost /usr/src/boost \
 	&& cd /usr/src/boost \
