@@ -1,6 +1,6 @@
 FROM fedora:rawhide
 
-RUN dnf -y install bzip2 icu gcc gcc-c++ cmake python3-sphinx doxygen breathe
+RUN dnf -y install bzip2 icu gcc gcc-c++ make cmake python3-sphinx doxygen breathe
 
 RUN buildDeps="which git libicu-devel zlib-devel bzip2-devel python-devel" \
 	&& dnf -y install $buildDeps \
