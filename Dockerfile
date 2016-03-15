@@ -1,6 +1,6 @@
 FROM fedora:rawhide
 
-RUN dnf -y install gcc gcc-c++ cmake ninja python2-sphinx doxygen breathe boost-devel
+RUN dnf -y install gcc gcc-c++ cmake ninja-build python2-sphinx doxygen breathe boost-devel
 
 RUN buildDeps="git" \
 	&& dnf -y install $buildDeps \
