@@ -1,6 +1,6 @@
 FROM fedora:rawhide
 
-RUN dnf -y install gcc gcc-c++ cmake ninja-build python2-sphinx doxygen breathe boost-devel gettext
+RUN dnf -y install gcc gcc-c++ cmake ninja-build python2-sphinx doxygen breathe boost-devel gettext zanata-client
 
 RUN alternatives --set ld /usr/bin/ld.gold
 
